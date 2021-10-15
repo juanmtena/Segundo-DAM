@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;11 - Abrir Ficheros&apos; to &apos;11 - Agenda&apos;" description="Rename resource &apos;11 - Abrir Ficheros&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/11 - Abrir Ficheros" name="11 - Agenda" stamp="1634195719089" updateReferences="true"/>
+</session>

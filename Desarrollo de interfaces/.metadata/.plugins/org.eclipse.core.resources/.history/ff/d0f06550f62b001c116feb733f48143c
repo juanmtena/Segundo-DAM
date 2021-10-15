@@ -1,0 +1,33 @@
+package ctrl;
+
+public class CtrlPrincipal {
+
+	public static int numPreg;
+	
+	public static void inicio() {
+		
+		model.Lenguajes.cargarLenguajes();
+		generarNumPregunta();
+		String pregunta = model.Lenguajes.ingles.get(numPreg);
+		
+		new view.FrmPrincipal();
+		view.FrmPrincipal.lblPalabra.setText(pregunta);
+		
+	}
+	
+	public static void generarNumPregunta() {
+		numPreg = (int)Math.floor(Math.random()*(10-1+1)+1);
+		//numPreg = 1;
+	}
+	
+	/*public static void comprobarPalabra() {
+		String busqueda = view.FrmPrincipal;
+		int indice = canciones.indexOf(busqueda);
+		if (indice != -1) {
+			System.out.println("La búsqueda está en el índice " + indice);
+		} else {
+			System.out.println("El elemento no existe");
+		}
+	}*/
+	
+}

@@ -1,0 +1,34 @@
+package ctrl;
+
+public class CtrlPrincipal {
+
+	public static int numPreg;
+	
+	public static void inicio() {
+		
+		model.Lenguajes.cargarLenguajes();
+		generarNumPregunta();
+		String pregunta = model.Lenguajes.ingles.get(numPreg);
+		
+		new view.FrmPrincipal();
+		view.FrmPrincipal.lblPalabra.setText(pregunta);
+		
+	}
+	
+	public static void generarNumPregunta() {
+		numPreg = (int)Math.floor(Math.random()*(9-1+0)+0);
+		//numPreg = 1;
+	}
+	
+	public static void comprobarPalabraEspanol() {
+		String busqueda = view.FrmPrincipal.txtIntroduce.getText();
+		if (model.Lenguajes.espanol.get(numPreg).toUpperCase().equals(busqueda.toUpperCase())) {
+			view.FrmPrincipal.lblResultado.setText("CORRECTO");
+			view.FrmPrincipal.lblResultado.setForeground(view.FrmPrincipal.CORRECTO);
+		} else {
+			view.FrmPrincipal.lblResultado.setText("INCORRECTO");
+			view.FrmPrincipal.lblResultado.setForeground(view.FrmPrincipal.INCORRECTO);
+		}
+	}
+	
+}

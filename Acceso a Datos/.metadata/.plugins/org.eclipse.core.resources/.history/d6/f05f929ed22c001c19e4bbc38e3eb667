@@ -1,0 +1,22 @@
+package unico;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+public class GestionFch {
+
+	private RandomAccessFile fch;
+	
+	public GestionFch(String fileName) {
+		abrirFichero(fileName);
+	}
+	
+	private void abrirFichero(String fileName) {
+		try {
+			fch = new RandomAccessFile(fileName, "rw");
+		} catch (FileNotFoundException e) {
+			System.err.println("El fichero " + fileName + " no existe");
+		}
+	}
+	
+}
