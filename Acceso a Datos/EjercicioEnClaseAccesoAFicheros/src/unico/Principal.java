@@ -66,11 +66,16 @@ public class Principal {
         case 1: // Listar todo
             gest.listarTodo();
             break;
-        case 2: // Buscar
+        case 2: // Buscar por posición
             break;
-        case 3: // Borrar
+        case 3: // Modificar
+        	
             break;
-        case 4: // Actualizar
+        case 4: // Añadir
+        	gest.anadir();
+        	break;
+        case 0: // Salir
+        	break;	
         }
 	}
 

@@ -1,8 +1,10 @@
 package model;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 
 public class GestionFch {
@@ -54,6 +56,14 @@ public class GestionFch {
 			//telefono
 			fch.writeLong(empleado.getTelefono());
 			
+			//email
+			String email = empleado.getEmail();
+			char letra3;
+			for (int i = 0; i < 25; i++) {
+				letra3 = (i < email.length()) ? email.charAt(i) : ' ';
+				fch.writeChar(letra3);
+			}
+			
 			//edad
 			fch.writeInt(empleado.getEdad());
 			
@@ -74,6 +84,7 @@ public class GestionFch {
 		String nombre = "";
 		String apellidos = "";
 		long telefono = 0;
+		String email = "";
 		int edad = 0;
 		double sueldo = 0.0;
 		
@@ -103,6 +114,16 @@ public class GestionFch {
 			//telefono
 			telefono = fch.readLong();
 			
+			//email
+			char letra3;
+			for(int i = 0; i < 10; i++) {
+				letra3 = fch.readChar();
+				if(letra3 != ' ') {
+					email += letra3;
+
+				}
+			}
+			
 			//edad
 			edad = fch.readInt();
 			
@@ -112,7 +133,7 @@ public class GestionFch {
 		}catch (IOException e) {
 			System.err.println("El archivo no es accesible");
 		}
-		return new Empleado(nombre, apellidos, telefono, edad, sueldo);
+		return new Empleado(nombre, apellidos, telefono, email, edad, sueldo);
 	}
 	
 	public void listarTodo() {
@@ -128,5 +149,19 @@ public class GestionFch {
 			System.err.println("Error");
 		}		
 	} 
+	
+	public void anadir() {
+		BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
+
+		String nombre;
+		try {
+			System.out.println("AÑADIR");
+			System.out.println("Nombre: ");
+			nombre = bufer.readLine();
+		} catch (Exception e) {
+			System.err.println("Se ha producido un error");
+		}
+		
+	}
 	
 }

@@ -5,13 +5,15 @@ public class Empleado {
 	String nombre;
 	String apellidos;
 	long telefono;
+	String email;
 	int edad;
 	double sueldo;
 	
-	public Empleado(String nombre, String apellidos, long telefono, int edad, double sueldo) {
+	public Empleado(String nombre, String apellidos, long telefono, String email,int edad, double sueldo) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.telefono = telefono;
+		this.email = email;
 		this.edad = edad;
 		this.sueldo = sueldo;
 	}
@@ -20,6 +22,7 @@ public class Empleado {
 		this.nombre = "";
 		this.apellidos = "";
 		this.telefono = 0;
+		this.email = "";
 		this.edad = 0;
 		this.sueldo = 0.0;
 	}
@@ -48,6 +51,14 @@ public class Empleado {
 		this.telefono = telefono;
 	}
 	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	public int getEdad() {
 		return edad;
 	}
@@ -66,7 +77,7 @@ public class Empleado {
 	
 	@Override
 	public String toString() {
-		return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", edad=" + edad
+		return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" + email + ", edad=" + edad
 				+ ", sueldo=" + sueldo + "]";
 	}
 	
