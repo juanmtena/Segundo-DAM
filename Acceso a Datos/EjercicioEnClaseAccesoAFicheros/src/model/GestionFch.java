@@ -1,5 +1,6 @@
 package model;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -37,16 +38,27 @@ public class GestionFch {
 			//nombre
 			String nombre = empleado.getNombre();
 			char letra;
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 10; i++) {
 				letra = (i < nombre.length()) ? nombre.charAt(i) : ' ';
 				fch.writeChar(letra);
 			}
 			
+			//apellidos
+			String apellidos = empleado.getApellidos();
+			char letra2;
+			for (int i = 0; i < 20; i++) {
+				letra2 = (i < apellidos.length()) ? apellidos.charAt(i) : ' ';
+				fch.writeChar(letra2);
+			}
+			
+			//telefono
+			fch.writeLong(empleado.getTelefono());
+			
 			//edad
 			fch.writeInt(empleado.getEdad());
 			
-			//altura
-			fch.writeDouble(empleado.getAltura());
+			//sueldo
+			fch.writeDouble(empleado.getSueldo());
 			
 		} catch (IOException e) {
 			System.err.println("El archivo no es accesible");
@@ -70,20 +82,51 @@ public class GestionFch {
 			fch.seek(posicion);
 			
 			//nombre
-			for(int i = 0; i < 5; i++) {
-				nombre += fch.readChar();
+			char letra;
+			for(int i = 0; i < 10; i++) {
+				letra = fch.readChar();
+				if(letra != ' ') {
+					nombre += letra;
+
+				}
 			}
+			
+			//apellidos
+			char letra2;
+			for(int i = 0; i < 20; i++) {
+				letra2 = fch.readChar();
+				if(letra2 != ' ') {
+					apellidos += letra2;
+				}
+			}
+			
+			//telefono
+			telefono = fch.readLong();
 			
 			//edad
 			edad = fch.readInt();
 			
-			//altura
-			altura = fch.readDouble();
+			//sueldo
+			sueldo = fch.readDouble();
 			
 		}catch (IOException e) {
 			System.err.println("El archivo no es accesible");
 		}
 		return new Empleado(nombre, apellidos, telefono, edad, sueldo);
 	}
+	
+	public void listarTodo() {
+		
+		try {
+			System.out.println(fch.length());
+			for(int i = 0; i < fch.length(); i ++) {
+				Empleado emp = leerRegistro(i);
+				System.out.println(emp);
+				;
+			}
+		} catch (IOException e) {
+			System.err.println("Error");
+		}		
+	} 
 	
 }
