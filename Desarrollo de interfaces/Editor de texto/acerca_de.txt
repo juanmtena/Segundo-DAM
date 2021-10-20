@@ -1,0 +1,7 @@
+<html>
+	<ul>
+		<p>   Editor de texto</p>
+	    <p>   Version 1.0</p>
+	    <p>   Autor: Juan Manuel Tena Luque</p>
+	</ul>
+</html>
