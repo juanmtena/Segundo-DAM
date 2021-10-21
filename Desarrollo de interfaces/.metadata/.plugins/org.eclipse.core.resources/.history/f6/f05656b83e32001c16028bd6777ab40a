@@ -1,0 +1,45 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+
+public class FrmFuente extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+
+	/**
+	 * Create the dialog.
+	 */
+	public FrmFuente() {
+		setModal(true);
+		setBounds(400, 200, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		JLabel lblFuente = new JLabel("FUENTE");
+		lblFuente.setBounds(47, 21, 46, 14);
+		contentPanel.add(lblFuente);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(28, 46, 85, 109);
+		contentPanel.add(scrollPane);
+		
+		JLabel lblTamano = new JLabel("TAMA\u00D1O");
+		lblTamano.setBounds(166, 21, 46, 14);
+		contentPanel.add(lblTamano);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(28, 46, 85, 109);
+		contentPanel.add(scrollPane_1);
+		setVisible(true);
+	}
+}
