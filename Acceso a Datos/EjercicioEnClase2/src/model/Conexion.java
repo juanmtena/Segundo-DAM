@@ -9,21 +9,21 @@ public class Conexion {
 	String userPass;
 	
 	public Conexion(String host, String port, String dbName, String userName, String userPass) {
-		super();
+		
 		this.host = host;
 		this.port = port;
 		this.dbName = dbName;
 		this.userName = userName;
 		this.userPass = userPass;
 	}
-	
-	
 
 	public Conexion() {
-		// TODO Auto-generated constructor stub
+		this.host = "";
+		this.port = "";
+		this.dbName = "";
+		this.userName = "";
+		this.userPass = "";
 	}
-
-
 
 	public String getHost() {
 		return host;
