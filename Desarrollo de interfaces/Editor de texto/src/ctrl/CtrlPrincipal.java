@@ -79,5 +79,13 @@ public class CtrlPrincipal {
 		}	
 	}
 	
+	public static void seleccionarFuente() {
+		
+		String fuente = view.FrmFuente.listFuente.getSelectedItem();
+		//int tamano = view.FrmFuente.listTamano.getSelectedItem(String.valueOf(tamano));
+		
+		
+	}
+	
 	
 }

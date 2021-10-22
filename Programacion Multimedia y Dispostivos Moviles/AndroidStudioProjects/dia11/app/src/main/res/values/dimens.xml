@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="anchotxtEntradaTexto">300dp</dimen>
+    <dimen name="altotxtEntradaTexto">80dp</dimen>
+    <dimen name="anchobtnCalcular">300dp</dimen>
+    <dimen name="altobtnCalcular">80dp</dimen>
+    <dimen name="ancholblImporte">300dp</dimen>
+    <dimen name="altolblImporte">80dp</dimen>
+
+</resources>

@@ -23,21 +23,6 @@ public class FrmPrincipal extends JFrame {
 	public static JTextArea txtArea;
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FrmPrincipal frame = new FrmPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -78,6 +63,15 @@ public class FrmPrincipal extends JFrame {
 		
 		JMenuItem mniAcercaDe = new JMenuItem("Acerca de");
 		mnuAyuda.add(mniAcercaDe);
+		
+		JMenu mnuFormato = new JMenu("Formato");
+		menuBar.add(mnuFormato);
+		
+		JMenuItem mniFuente = new JMenuItem("Fuente");
+		mnuFormato.add(mniFuente);
+		
+		JMenuItem mniColores = new JMenuItem("Colores");
+		mnuFormato.add(mniColores);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -142,5 +136,20 @@ public class FrmPrincipal extends JFrame {
 			}
 		});
 		
+		mniFuente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Has seleccionado FUENTE");
+				new FrmFuente();
+			}
+		});
+		
+		mniColores.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Has seleccionado COLORES");
+				new FrmColores();
+			}
+		});
+		
+		setVisible(true);
 	}
 }

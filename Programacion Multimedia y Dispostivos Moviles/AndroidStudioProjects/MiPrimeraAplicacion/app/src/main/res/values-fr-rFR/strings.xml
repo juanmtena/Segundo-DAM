@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi Primera Aplicacion</string>
+    <string name="txtBtnAceptar">ACEPTÉ</string>
+    <string name="btnCancelar">CANCELÉ</string>
+    <string name="lblNombre">Name:</string>
+</resources>

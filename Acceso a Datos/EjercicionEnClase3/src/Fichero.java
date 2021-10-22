@@ -19,9 +19,9 @@ public class Fichero {
 	}
 	
 	private static void crearFchComun(File f1, File f2, File comun) throws IOException {
-		
+				
 		try {
-			FileReader fch = new FileReader(f1);
+			FileReader fch = new FileReader(f2);
 			BufferedReader bufLectura = new BufferedReader(fch);
 			
 			String lineaLeida1 = "";
@@ -29,7 +29,7 @@ public class Fichero {
 			lineaLeida1 = bufLectura.readLine();
 			
 			while(lineaLeida1 != null) {
-				if(existeEnFch(f2, lineaLeida1)) {
+				if(existeEnFch(f1, lineaLeida1)) {
 					anadir(comun, lineaLeida1);
 				}
 				lineaLeida1 = bufLectura.readLine();
@@ -37,9 +37,9 @@ public class Fichero {
 			bufLectura.close();
 			fch.close();
 		} catch (FileNotFoundException e) {
-			System.err.println("El fichero " + f1 + " no existe.");
+			System.err.println("El fichero " + f2 + " no existe.");
 		} catch (IOException e) {
-			System.err.println("Se ha producido un error con el fichero " + f1);
+			System.err.println("Se ha producido un error con el fichero " + f2);
 		} catch (Exception e) {
 			System.err.println("Se ha producido un error");
 		}
@@ -69,11 +69,13 @@ public class Fichero {
 		
 	}
 	
-	private static boolean existeEnFch(File f2, String lineaLeida1) {
+	private static boolean existeEnFch(File f1, String lineaLeida1) {
 		boolean encontrada = false;
+		String comun = "";
+		int contador = 0;
 		
 		try {
-			FileReader fch = new FileReader(f2);
+			FileReader fch = new FileReader(f1);
 			BufferedReader bufLectura = new BufferedReader(fch);
 			
 			String lineaLeida2 = "";
@@ -81,18 +83,22 @@ public class Fichero {
 			lineaLeida2 = bufLectura.readLine();
 			while(lineaLeida2 != null && !encontrada) {
 				if(lineaLeida2.equals(lineaLeida1)) {
+					comun += lineaLeida2;
 					encontrada = true;
+					contador++;
 				}
 				lineaLeida2 = bufLectura.readLine();
 			}
+			
+			System.out.println(comun + " ," + contador);
 			
 			bufLectura.close();
 			fch.close();
 			
 		} catch (FileNotFoundException e) {
-			System.err.println("El fichero " + f2 + " no existe.");
+			System.err.println("El fichero " + f1 + " no existe.");
 		} catch (IOException e) {
-			System.err.println("Se ha producido un error con el fichero " + f2);
+			System.err.println("Se ha producido un error con el fichero " + f1);
 		} catch (Exception e) {
 			System.err.println("Se ha producido un error");
 		}

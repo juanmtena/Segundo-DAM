@@ -17,7 +17,7 @@ public class Principal {
 		
 		if(fch.exists()) {
 			if(fch.isDirectory()) {
-				//infoDir(fch);
+				infoDir(fch);
 				System.out.println(contarCarpetas(fch));
 			}else {
 				infoFile(fch);

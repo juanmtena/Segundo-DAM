@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/moduloGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/btnDAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/dam" />
+
+        <RadioButton
+            android:id="@+id/btnDAW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/daw" />
+
+        <RadioButton
+            android:id="@+id/btnASIR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/asir" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/turnoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="50dp"
+        android:checkedButton="@id/btnMañana"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/btnMañana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ma_ana" />
+
+        <RadioButton
+            android:id="@+id/btnTarde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tarde" />
+
+        <RadioButton
+            android:id="@+id/btnOnline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/online" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblImporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="328dp"
+        android:width="@dimen/ancholblImporte"
+        android:height="@dimen/altolblImporte"
+        android:background="@color/btnCalcular"
+        android:lineSpacingExtra="8sp"
+        android:numeric="integer"
+        android:text="@string/importe"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/swicthIncluirIva"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="250dp"
+        android:text="@string/incluir_iva"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblImporte"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        style="@style/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="@dimen/anchobtnCalcular"
+        android:height="@dimen/altobtnCalcular"
+        android:background="@color/btnCalcular"
+        android:text="@string/calcular_importe"
+        app:iconTint="@color/btnCalcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swicthIncluirIva"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtEntradaTexto"
+        android:layout_width="@dimen/anchotxtEntradaTexto"
+        android:layout_height="@dimen/altotxtEntradaTexto"
+        android:layout_marginTop="36dp"
+        android:hint="@string/introduce_tu_nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
