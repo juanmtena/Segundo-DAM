@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mas Componentes</string>
+
+    <string-array name="hermandades">
+        <item>Gran Poder</item>
+        <item>La Macarena</item>
+        <item>Montesion</item>
+        <item>Dulce Nombre</item>
+    </string-array>
+</resources>

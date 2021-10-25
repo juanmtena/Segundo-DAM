@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">dia11</string>
+    <string name="dam">DAM</string>
+    <string name="daw">DAW</string>
+    <string name="asir">ASIR</string>
+    <string name="ma_ana">Mañana</string>
+    <string name="tarde">Tarde</string>
+    <string name="online">Online</string>
+    <string name="importe">Importe...</string>
+    <string name="incluir_iva">Incluir IVA</string>
+    <string name="calcular_importe">Calcular Importe</string>
+    <string name="introduce_tu_nombre">Introduce tu nombre...</string>
+</resources>
