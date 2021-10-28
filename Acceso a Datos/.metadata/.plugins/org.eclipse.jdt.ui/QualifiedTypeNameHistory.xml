@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Element"/>
     <fullyQualifiedTypeName name="controller.GestionFicherosXML"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="model.Partida"/>
     <fullyQualifiedTypeName name="model.Jugador"/>
     <fullyQualifiedTypeName name="javax.xml.transform.TransformerFactory"/>
@@ -34,4 +33,9 @@
     <fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
+    <fullyQualifiedTypeName name="controller.GestionTemperatura"/>
+    <fullyQualifiedTypeName name="model.CCAA"/>
+    <fullyQualifiedTypeName name="model.Provincia"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="model.Ciudad"/>
 </qualifiedTypeNameHistroy>
