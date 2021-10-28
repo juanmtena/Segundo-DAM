@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AplicacionNazarenos</string>
+    <array name="contenidoLista">
+        <item>Gran Poder</item>
+        <item>La Macarena</item>
+        <item>Montesion</item>
+    </array>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtNumHermanos">Hermanos</string>
+    <string name="txtAno">Año de fundacion</string>
+</resources>

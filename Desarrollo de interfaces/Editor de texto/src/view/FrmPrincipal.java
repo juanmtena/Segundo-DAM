@@ -16,11 +16,14 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JMenu;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+
 import java.awt.Toolkit;
 
 public class FrmPrincipal extends JFrame {
 
-	public static JTextArea txtArea;
+	private static final long serialVersionUID = 1L;
+	public static JTextPane txtArea;
 	private JPanel contentPane;
 
 
@@ -28,7 +31,7 @@ public class FrmPrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public FrmPrincipal() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Desktop\\logotipo.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\JuanLoreLeo\\Desktop\\logotipoEditorDeTexto.png"));
 		setTitle("EDITOR DE TEXTO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -77,44 +80,45 @@ public class FrmPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
-		txtArea = new JTextArea();
+		txtArea = new JTextPane();
 		contentPane.add(txtArea, BorderLayout.CENTER);
 		txtArea.setVisible(false);
 		
 		
 		//ASignamos eventos
+		//NUEVO
 		mniNuevo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtArea.setVisible(true);
 			}
 		});
 		
+		//ABRIR
 		mniAbrir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado ABRIR");
 				txtArea.setVisible(true);
 				ctrl.CtrlPrincipal.seleccionarAbrir();
 			}
 		});
 		
+		//GUARDAR
 		mniGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado GURDAR");
 				ctrl.CtrlPrincipal.escribir();
 			}
 		});
 		
+		//GUARDAR COMO
 		mniGuardarComo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado GUARDAR COMO");
 				ctrl.CtrlPrincipal.seleccionarGuardar();
 				ctrl.CtrlPrincipal.escribir();
 			}
 		});
 		
+		//SALIR
 		mniSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado SALIR");
 				int opcion = JOptionPane.showConfirmDialog(null, "¿Desea realmente salir?", "SALIR", JOptionPane.YES_NO_OPTION);
 				if(opcion == 0) {
 					ctrl.CtrlPrincipal.finalizar();
@@ -122,30 +126,30 @@ public class FrmPrincipal extends JFrame {
 			}
 		});
 		
+		//MANUAL
 		mniManual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado MANUAL");
 				new FrmManual();
 			}
 		});
 		
+		//ACERCA DE
 		mniAcercaDe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado ACERCA DE");
 				new FrmAcercaDe();
 			}
 		});
 		
+		//FUENTE
 		mniFuente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado FUENTE");
 				new FrmFuente();
 			}
 		});
 		
+		//COLORES
 		mniColores.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Has seleccionado COLORES");
 				new FrmColores();
 			}
 		});

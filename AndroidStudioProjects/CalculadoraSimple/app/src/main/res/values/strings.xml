@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CalculadoraSimple</string>
+    <string name="txtCalculadora">Calculadora Simple</string>
+    <string name="btnSuma">SUMAR</string>
+    <string name="btnResta">RESTA</string>
+    <string name="btnMultiplicar">MULTIPLICAR</string>
+    <string name="btnDividir">DIVIDIR</string>
+    <string name="btnCalcular">CALCULAR</string>
+    <string name="txtSuma">SUMA</string>
+    <string name="txtResta">RESTA</string>
+    <string name="txtMultiplicar">MULTIPLICAR</string>
+    <string name="txtDividir">DIVIDIR</string>
+    <string name="lblNum">Introduzca numero</string>
+    <string name="msjSuma">Has seleccionado la suma</string>
+    <string name="msjResta">Has seleccionado la resta</string>
+    <string name="msjMultiplicacion">Has seleccionado la multiplicación</string>
+    <string name="msjDivision">Has seleccionado la división</string>
+</resources>

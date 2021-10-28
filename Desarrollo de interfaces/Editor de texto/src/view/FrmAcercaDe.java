@@ -1,14 +1,11 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.Image;
 import java.io.File;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
@@ -22,19 +19,22 @@ public class FrmAcercaDe extends JDialog {
 		setTitle("Acerca de");
 		setBounds(300, 250, 350, 200);
 		getContentPane().setLayout(null);
-		setModal(true);
+		setModal(false);
 		
 		JLabel lblNewLabel = new JLabel(ctrl.CtrlPrincipal.leer(fichero));
 		lblNewLabel.setBounds(40, 0, 294, 161);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblFoto = new JLabel(new ImageIcon("C:\\Users\\Usuario\\Desktop\\logotipo.png"));
+		JLabel lblFoto = new JLabel();
 		lblFoto.setBounds(10, 26, 92, 104);
+		ImageIcon imgIcon = new ImageIcon("logotipoEditorDeTexto.png");
+		Image imgEscalada = imgIcon.getImage().getScaledInstance(lblFoto.getWidth(),
+				lblFoto.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscalado = new ImageIcon(imgEscalada);
+        lblFoto.setIcon(iconoEscalado);
 		getContentPane().add(lblFoto);
-		setVisible(true);
-		
-		//JLabel foto = new JLabel(new ImageIcon("C:\\Users\\Usuario\\Desktop\\logotipo.png"));
+		setVisible(true);		
 		
 	}
 }

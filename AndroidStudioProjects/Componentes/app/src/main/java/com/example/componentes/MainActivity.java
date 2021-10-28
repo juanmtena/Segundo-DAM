@@ -2,6 +2,7 @@ package com.example.componentes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle(getString(R.string.calculadora));
+
         FloatingActionButton btcAccion = findViewById(R.id.btnAction);
         Button btnUno = findViewById(R.id.btn1);
         Button btnDos = findViewById(R.id.btn2);
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnCuatro = findViewById(R.id.btn4);
         Button btnCinco = findViewById(R.id.btn5);
         Button btnSeis = findViewById(R.id.btn6);
+        Button btnSegundaVentana = findViewById(R.id.btnSegundaVentana);
 
         findViewById(R.id.btnAction).setOnClickListener(
                 v -> {
@@ -122,6 +126,11 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.btn6).setVisibility(View.VISIBLE);
                 }
         );
+
+        findViewById(R.id.btnSegundaVentana).setOnClickListener(v-> {
+            Intent ventana = new Intent(MainActivity.this, SegundaActivity.class);
+            startActivity(ventana);
+        });
 
     }
 }

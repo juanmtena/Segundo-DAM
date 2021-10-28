@@ -49,13 +49,12 @@ public class FrmColores extends JDialog {
 		JButton btnFuenteRosa = new JButton("");
 		btnFuenteRosa.setBorderPainted(false);
 		btnFuenteRosa.setBackground(Color.PINK);
-		btnFuenteRosa.setOpaque(true);
 		btnFuenteRosa.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
 				foreground = Color.pink;
 				if(foreground != background) {
-				lblPrueba.setForeground(Color.pink);
+					lblPrueba.setForeground(Color.pink);
 				}
 			}
 		});
@@ -69,7 +68,7 @@ public class FrmColores extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				foreground = Color.red;
 				if(foreground != background) {
-				lblPrueba.setForeground(Color.red);
+					lblPrueba.setForeground(Color.red);
 				}
 			}
 		});
@@ -226,6 +225,11 @@ public class FrmColores extends JDialog {
 		
 		JButton btnAceptar = new JButton("ACEPTAR");
 		btnAceptar.setBounds(81, 222, 89, 23);
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		contentPanel.add(btnAceptar);
 		
 		JButton btnGuardar = new JButton("GUARDAR POR DEFECTO");

@@ -19,8 +19,9 @@
         <item name="android:colorBackground">@color/black</item>
     </style>
 
-    <style name="lblError" parent="Theme.Componentes">
-
+    <style name="btnSegundaVentana" parent="Theme.Componentes">
+        <item name="backgroundTint">@color/btnSegundaVentana</item>
+        <item name="android:textSize">@dimen/tamanoLetras</item>
     </style>
 
 </resources>

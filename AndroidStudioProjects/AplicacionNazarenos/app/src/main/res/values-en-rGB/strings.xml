@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AplicacionNazarenos</string>
+    <string name="txtNombre">Name</string>
+    <string name="txtNumHermanos">Number of brothers</string>
+    <string name="txtAno">Years</string>
+</resources>

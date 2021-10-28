@@ -1,7 +1,7 @@
 <html>
-	<ul>
-		<p>   Editor de texto</p>
-	    <p>   Version 1.0</p>
-	    <p>   Autor: Juan Manuel Tena Luque</p>
-	</ul>
+	<pre>
+    Editor de texto
+    Version 1.0
+    Autor: Juan Manuel Tena Luque
+	</pre>
 </html>

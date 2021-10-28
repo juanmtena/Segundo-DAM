@@ -6,4 +6,7 @@
     <string name="numero_4">numero 4</string>
     <string name="numero_5">numero 5</string>
     <string name="numero_6">numero 6</string>
+    <string name="btnSegundaVentana">ABRIR SEGUNDA VENTANA</string>
+    <string name="calculadora">Calculadora</string>
+    <string name="btnNuevo">Boton nuevo</string>
 </resources>

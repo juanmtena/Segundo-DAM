@@ -1,5 +1,6 @@
 package ctrl;
 
+import java.awt.Font;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -7,6 +8,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 import javax.swing.JFileChooser;
+
+import view.FrmFuente;
 
 public class CtrlPrincipal {
 	
@@ -64,7 +67,6 @@ public class CtrlPrincipal {
 		
 		if(opcion != JFileChooser.CANCEL_OPTION) {
 			fichero = fileChooser.getSelectedFile();
-			
 		}		
 	}
 	
@@ -79,13 +81,36 @@ public class CtrlPrincipal {
 		}	
 	}
 	
-	public static void seleccionarFuente() {
+	public static void letraSeleccionada() {
 		
-		String fuente = view.FrmFuente.listFuente.getSelectedItem();
-		//int tamano = view.FrmFuente.listTamano.getSelectedItem(String.valueOf(tamano));
+		int seleccion = 0;
 		
+		if (view.FrmFuente.rdbtnNormal.isSelected()) {
+			seleccion = Font.PLAIN;
+		}else if(view.FrmFuente.rdbtnNegrita.isSelected()){
+			seleccion = Font.BOLD;
+		}else if(view.FrmFuente.rdbtnCursiva.isSelected()){
+			seleccion = Font.ITALIC;
+		}
+		
+		view.FrmFuente.lblTextoPrueba.setFont(new Font(view.FrmFuente.listFuente.getSelectedItem(), seleccion, view.FrmFuente.listTamano.getSelectedIndex()));
 		
 	}
 	
+	public static void ponerLetraTexto() {
+		
+		int seleccion = 0;
+		
+		if (view.FrmFuente.rdbtnNormal.isSelected()) {
+			seleccion = Font.PLAIN;
+		}else if(view.FrmFuente.rdbtnNegrita.isSelected()){
+			seleccion = Font.BOLD;
+		}else if(view.FrmFuente.rdbtnCursiva.isSelected()){
+			seleccion = Font.ITALIC;
+		}
+		
+		view.FrmPrincipal.txtArea.setFont(new Font(view.FrmFuente.listFuente.getSelectedItem(), seleccion, view.FrmFuente.listTamano.getSelectedIndex()));
+		
+	}
 	
 }

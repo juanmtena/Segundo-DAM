@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<game>
+    	
+    <jugador numero="321">
+        		
+        <nombre>Pepe</nombre>
+        		
+        <apellidos>Lopez Gutierrez</apellidos>
+        		
+        <nick>Batman</nick>
+        		
+        <puntos>1200</puntos>
+        	
+    </jugador>
+    	
+    <jugador numero="621">
+        		
+        <nombre>Juan Manuel</nombre>
+        		
+        <apellidos>Tena Luque</apellidos>
+        		
+        <nick>Superman</nick>
+        		
+        <puntos>1900</puntos>
+        	
+    </jugador>
+    	
+    <jugador numero="516">
+        		
+        <nombre>Antonio</nombre>
+        		
+        <apellidos>Torres Alvarez</apellidos>
+        		
+        <nick>Spiderman</nick>
+        		
+        <puntos>1450</puntos>
+        	
+    </jugador>
+    	
+    <jugador numero="992">
+        		
+        <nombre>David</nombre>
+        		
+        <apellidos>Priego Oliva</apellidos>
+        		
+        <nick>Joker</nick>
+        		
+        <puntos>985</puntos>
+        	
+    </jugador>
+    
+    <jugador numero="1122">
+        <nombre>Mario</nombre>
+        <apellidos>Fernan Feria</apellidos>
+        <nick>Dado</nick>
+        <puntos>145</puntos>
+    </jugador>
+</game>
